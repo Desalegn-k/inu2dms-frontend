@@ -4,7 +4,7 @@ import axios from "axios";
 // Create Axios instance
 export const api = axios.create({
   // http://localhost:5003
-  baseURL: process.env.REACT_APP_API_URL, // your backend base URL
+  baseURL: "https://inudms-backend.onrender.com/api", // your backend base URL
   timeout: 10000, // 10 seconds timeout
 });
 
