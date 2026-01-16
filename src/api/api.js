@@ -3,7 +3,8 @@ import axios from "axios";
 
 // Create Axios instance
 export const api = axios.create({
-  baseURL: "http://localhost:5003/api", // your backend base URL
+  // http://localhost:5003
+  baseURL: "https://inudms-backend.onrender.com/api", // your backend base URL
   timeout: 10000, // 10 seconds timeout
 });
 
