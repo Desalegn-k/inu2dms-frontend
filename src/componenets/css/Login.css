@@ -1,0 +1,272 @@
+/* Login.css
+   Professional & subtle animations, modern clean look.
+   Works with:
+   <div className="login-container">  (root)
+   <h2>Login</h2>
+   <form> ... <div> <label>...</label> <input ... /> </div> ... </form>
+   <p>message</p>
+*/
+
+/* Page background and centering */
+:root {
+  --bg-1: #0f172a;
+  --bg-2: #061224;
+  --accent: #6ee7b7;
+  --muted: #94a3b8;
+  --card: rgba(255,255,255,0.04);
+  --glass: rgba(255,255,255,0.03);
+  --glass-border: rgba(255,255,255,0.06);
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* full-screen gradient background */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  background: linear-gradient(135deg, rgb(5, 63, 108));
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+  margin-top: 70px;
+   animation: fadeIn 0.8s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-container .login-man{
+  border-radius:   0px 50px 50px 0px;
+  border-color:red;
+  border: 1px solid;
+  height: 490px;
+  margin-top: 27px;
+}
+.login-logo{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+
+/* subtle animated shapes for visual interest */
+.login-container::before,
+.login-container::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.12;
+  transform: translateZ(0);
+  pointer-events: none;
+}
+.login-container::before {
+  width: 520px; height: 520px;
+  right: -120px; top: -80px;
+  background: radial-gradient(circle at 30% 30%, #22c1c3, transparent 40%);
+  animation: floatSlow 8s ease-in-out infinite;
+}
+.login-container::after {
+  width: 420px; height: 420px;
+  left: -140px; bottom: -100px;
+  background: radial-gradient(circle at 70% 70%, #6ee7b7, transparent 40%);
+  animation: floatSlow 10s ease-in-out infinite reverse;
+}
+@keyframes floatSlow {
+  0% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(18px) scale(1.02); }
+  100% { transform: translateY(0) scale(1); }
+}
+
+/* card */
+.login-container > div,
+.login-container > form,
+.login-container > section {
+  z-index: 2;
+}
+
+/* card / form wrapper */
+.login-container form {
+  
+  width: 100%;
+  max-width: 440px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(51, 158, 229, 0.01));
+  
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+  border-radius: 50px 0 0 50px;
+  padding: 50px;
+  color: #e6eef8;
+  transform-origin: center;
+  /* animation: cardPop 420ms cubic-bezier(.2,.9,.3,1); */
+  backdrop-filter: blur(8px) saturate(120%);
+  height: 490px;
+  margin-top: 27px;
+}
+
+/* small headline */
+.login-container h2 {
+  margin: 0 0 18px 0;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+  color: #f8fbff;
+  text-align: left;
+}
+
+/* input field wrapper */
+.login-container form .field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+/* label styling */
+.login-container form label {
+  font-size: 20px;
+  color: var(--muted);
+  margin-bottom: 8px;
+  transition: color .18s ease, transform .18s ease;
+  user-select: none;
+}
+
+/* input styling */
+.login-container form input[type="email"],
+.login-container form input[type="password"],
+.login-container form input[type="text"] {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 15px;
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid orange;
+  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
+  color: #eaf4ff;
+  transition: box-shadow .18s ease, border-color .18s ease, transform .12s ease;
+  caret-color: var(--accent);
+  -webkit-appearance: none;
+}
+
+/* subtle inner glow on focus */
+.login-container form input:focus {
+  border-color: rgba(110,231,183,0.95);
+  box-shadow: 0 6px 20px rgba(110,231,183,0.06), inset 0 1px 0 rgba(255,255,255,0.02);
+  transform: translateY(-1px);
+}
+
+/* placeholder color */
+.login-container form input::placeholder {
+  color: rgba(230,240,255,0.28);
+}
+
+/* nice animated underline using pseudo element */
+.login-container form .field::after {
+  content: "";
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  height: 2px;
+  bottom: -6px;
+  background: linear-gradient(90deg, transparent, rgba(110,231,183,0.6), transparent);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform .28s cubic-bezier(.2,.9,.3,1), opacity .18s;
+  opacity: 0;
+}
+.login-container form .field:focus-within::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+/* submit button */
+.login-container form button[type="submit"] {
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px 14px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  color: #062223;
+  background: linear-gradient(90deg, #00d4a6, #00b58f);
+  box-shadow: 0 8px 24px rgba(2,6,23,0.6);
+  transition: transform .14s ease, box-shadow .14s ease, filter .14s;
+  font-weight: 600;
+}
+.login-container form button[type="submit"]:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.03);
+  box-shadow: 0 14px 36px rgba(2,6,23,0.7);
+}
+.login-container form button[type="submit"]:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 18px rgba(2,6,23,0.45);
+}
+
+/* message (success/error) */
+.login-container p {
+  margin-top: 18px;
+  font-size: 14px;
+  line-height: 1.3;
+  padding: 10px 12px;
+  border-radius: 8px;
+  display: inline-block;
+  animation: fadeInUp .28s ease;
+}
+
+/* differentiate success vs error by text content presence — encourage using classes if possible */
+.login-container p[role="status"] {
+  background: rgba(110,231,183,0.08);
+  color: #aef3cf;
+  border: 1px solid rgba(110,231,183,0.12);
+}
+.login-container p.error {
+  background: rgba(255,100,100,0.05);
+  color: #ffcfcf;
+  border: 1px solid rgba(255,100,100,0.08);
+}
+
+/* small responsive tweaks */
+@media (max-width: 520px) {
+  .login-container form {
+    padding: 22px;
+    border-radius: 12px;
+  }
+}
+
+/* subtle entrance animations */
+/* @keyframes cardPop {
+  0% { opacity: 0; transform: translateY(18px) scale(.995); }
+  60% { opacity: 1; transform: translateY(-4px) scale(1.002); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+} */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Accessibility focus-visible */
+.login-container form input:focus,
+.login-container form button:focus {
+  outline: 3px solid rgba(110,231,183,0.14);
+  outline-offset: 2px;
+}

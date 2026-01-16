@@ -1,0 +1,269 @@
+.stu-containerr, .stulist-table{
+  animation: fadeIn 0.8s ease-in-out;
+
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+ /* Container */
+.stu-container {
+  background: #f4f6f9;
+  min-height: 100vh;
+  padding: 25px;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* Page Title */
+.stu-container h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-size: 26px;
+}
+
+/* Table Styling */
+.stulist-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Table Head */
+.stulist-table thead tr {
+  background: linear-gradient(135deg, #34495e, #2c3e50);
+}
+
+.stulist-table th {
+  color: #ffffff;
+  padding: 12px 10px;
+  text-align: left;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+
+/* Table Body */
+.stulist-table td {
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: left;
+}
+
+/* Zebra striping */
+.stulist-table tbody tr:nth-child(even) {
+  background: #f9fafb;
+}
+
+/* Hover effect */
+.stulist-table tbody tr:hover {
+  background: #eef3f8;
+  transition: background 0.2s ease-in-out;
+}
+
+/* Status column styling */
+.stulist-table td:last-child {
+  text-transform: capitalize;
+}
+
+/* Pagination */
+.stu-container button {
+  padding: 8px 14px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 6px;
+   
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.stu-container .prev{
+ background-color: #2563eb;
+  color: white;
+}
+.stu-container .prev:hover{
+  background: #187bcd
+}
+.stu-container .next{
+background: #28a745  ;
+  color: white  ;
+}
+.stu-container .next:hover{
+  background: #218838
+}
+.stu-container button:hover {
+  background: #1f2d3d;
+}
+
+.stu-container button:disabled {
+  background: #b0b8c1;
+  cursor: not-allowed;
+}
+
+/* Responsive table */
+@media (max-width: 1000px) {
+  .stulist-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+
+/* Search Bar */
+.student-search {
+  width: 100% !important;
+  max-width: 450px;
+  padding: 10px 14px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+
+  
+  
+}
+
+.student-search:focus {
+  outline: none;
+  border-color: #2c3e50;
+}
+
+/* Status badges */
+.status-active {
+  color: green !important;
+  font-weight: bold;
+}
+
+.status-inactive {
+  color: red !important;
+  font-weight: bold;
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+
+ 
+
+.students-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  margin-bottom: 15px;
+  height: 50px;
+}
+
+/* LEFT SIDE (Buttons) */
+.toolbar-left {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* BUTTON BASE */
+.btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  font-weight: 500;
+}
+
+/* Assign Single */
+.btn-assign {
+  background: #1e90ff !important;
+  color: white !important;
+   height: 37px;
+   font-weight: bold;
+    text-transform: none !important;
+}
+
+.btn-assign:hover {
+  background: #187bcd !important;
+}
+
+/* AutoAssign button (override if needed) */
+.auto-assign-btn {
+  background: #28a745 !important;
+  color: white !important;
+  padding: 8px !important;
+  height: 37px;
+  font-weight: bold;
+  margin-top: 29px !important;
+  text-transform: none !important;
+}
+
+.auto-assign-btn:hover {
+  background: #218838 !important;
+}
+
+/* RIGHT SIDE (Search) */
+.toolbar-right {
+  display: flex;
+  align-items: center;
+}
+
+/* SEARCH BAR */
+.search-wrapper {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 14px;
+}
+
+.student-search {
+  padding: 8px 12px 8px 32px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  width: 220px;
+   font-weight: bold;
+  
+}
+
+.student-search:focus {
+  outline: none;
+  border-color: #1e90ff;
+}
+
+
+
+ .search-wrapper{
+  display: flex;
+  text-align: center;
+  margin-top: 10px;
+ 
+ }
+ .search-icon{
+  height: 30px;
+  font-size: 17px !important;
+  font-weight: bold !important;
+  color: dodgerblue;
+ }
+
+ 

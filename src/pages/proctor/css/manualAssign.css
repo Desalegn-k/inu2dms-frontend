@@ -1,0 +1,49 @@
+.manual-assign-container {
+  background: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  
+  max-width: 500px;
+   animation: fadeIn 0.8s ease-in-out;
+   color: white !important;
+}
+
+.manual-assign-container h3 {
+  margin-bottom: 15px;
+  
+}
+
+.manual-assign-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.manual-assign-form input,
+.manual-assign-form select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.manual-assign-form button {
+  background: #1e90ff;
+  color: white;
+  padding: 10px;
+  border: none;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.manual-assign-form button:disabled {
+  background: gray;
+  cursor: not-allowed;
+}
+
+.assign-message {
+  margin-bottom: 10px;
+  font-weight: bold;
+}

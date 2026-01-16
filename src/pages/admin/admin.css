@@ -1,0 +1,88 @@
+.admin-container {
+  margin-top: 100px;
+  /* Removed display: flex since sidebar is now fixed */
+  animation: fadeIn 0.8s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sidebar {
+  width: 280px;
+  background: #1e293b;
+  color: white;
+  padding: 20px;
+  position: fixed;
+  top: 100px; /* Align with margin-top of container */
+  left: 0;
+  height: calc(100vh - 100px); /* Full height minus top margin */
+  overflow-y: auto; /* Allow scrolling if sidebar content is long */
+  
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: gray;
+  display: block;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.sidebar a:hover {
+  background: dodgerblue;
+  color: white;
+}
+.active-link {
+  color: orange !important; /* ONLY text/icon color changes */
+  font-weight: bold;
+}
+
+.admin-content {
+  margin-left: 200px;  
+  padding: 30px;
+  background: linear-gradient(
+    to right,
+    dodgerblue,
+    rgb(205, 138, 102)
+  ) !important;
+  min-height: calc(
+    100vh - 100px
+  ); /* Ensure it takes at least the viewport height */
+  overflow-y: auto; /* Allow content to scroll if needed */
+}
+
+.ManageAdmins-table {
+  border-collapse: collapse;
+}
+.delete {
+  background-color: red;
+  border: none;
+  border-radius: 15px !important;
+  width: 80px;
+  padding: 5px;
+}
+.edit {
+  background-color: dodgerblue;
+  border: none;
+  border-radius: 15px !important;
+  width: 80px;
+  padding: 5px;
+  margin: 4px;
+}
+.ma {
+  margin-right: 8px;
+  margin-bottom: 10px;
+}

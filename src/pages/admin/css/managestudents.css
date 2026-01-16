@@ -1,0 +1,30 @@
+.managestu-container{
+  background-color: #053F6C;
+  color: white;
+  padding: 4% 4% 8% 4%;
+  animation: fadeIn 0.8s ease-in-out;
+  border-radius: 20px;
+}
+
+.managestudents-table{
+  width: 100%;
+  margin: 10px auto;
+  text-align: left;
+   border-collapse: collapse;
+   border: 10px !important;
+   border-color: orange !important;
+   border-radius: 15px !important;
+
+   
+}
+.tr-th th{
+  padding: 7px !important;
+  background-color: aliceblue;
+  color: orange;
+}
+.body-tr td{
+   padding: 5px !important;
+     color: orange;
+ 
+
+}

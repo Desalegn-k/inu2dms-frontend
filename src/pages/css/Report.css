@@ -1,0 +1,60 @@
+.report-container h1 {
+  font-style: italic;
+  color: orange;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.report-table thead {
+  background-color: #007bff;
+  color: white;
+}
+
+.report-table th,
+.report-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.report-table th {
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+
+.report-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.report-table tbody tr:hover {
+  background-color: #e9ecef;
+  cursor: pointer;
+}
+
+.status.pending {
+  color: orange;
+  font-weight: bold;
+}
+
+.status.responded {
+  color: green;
+  font-weight: bold;
+}
+
+.pending-text {
+  font-style: italic;
+  color: gray;
+}
