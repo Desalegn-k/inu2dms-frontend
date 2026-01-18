@@ -9,10 +9,11 @@ export default function StudentRegister() {
   const navigate=useNavigate();
   const [form, setForm] = useState({
     full_name: "",
+    studentId: "",
     gender: "",
     email: "",
     password: "",
-    phone: "",
+    
     college_id: "",
     department_id: "",
     year: "",
