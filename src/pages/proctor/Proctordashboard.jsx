@@ -16,7 +16,7 @@ export default function AdminDashboard() {
     <div className="admin-container">
       {/* Sidebar */}
       <aside className="sidebar procctor-sidebar">
-        <h2>Admin Dashboard</h2>
+        <h2>Proctor Dashboard</h2>
         <nav>
           <NavLink
             to="/proctor"

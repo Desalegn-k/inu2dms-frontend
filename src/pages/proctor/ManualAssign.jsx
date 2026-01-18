@@ -45,7 +45,7 @@ export default function ManualAssign() {
         roomNumber,
       });
 
-      setMessage(`✅ ${res.data.message}`);
+      setMessage(` ${res.data.message}`);
       setStudentId("");
       setDormNumber("");
       setRoomNumber("");

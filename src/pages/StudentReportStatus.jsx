@@ -28,14 +28,21 @@ export default function StudentReportStatus() {
       <h1>My Reports</h1>
 
       {reports.length === 0 ? (
-        <p>No reports submitted</p>
+        <p style={{
+          border:"solid",
+          color:"orangered",
+          borderRadius:"10px",
+          borderColor:"orange",
+          padding:20,
+          fontSize:20
+        }}>No reports submitted</p>
       ) : (
         <table className="report-table">
           <thead>
             <tr>
               <th>Issue</th>
               <th>Status</th>
-              <th>Admin Response</th>
+              <th> Response</th>
             </tr>
           </thead>
           <tbody>

@@ -14,7 +14,8 @@ export default function MyRoom() {
   if (!room) return <p>Loading...</p>;
 
   if (room.message === "Not assigned") {
-    return <h3>You are not assigned to any room.</h3>;
+    return <h3 style={{color:"orangered",border:"solid",padding:20,borderRadius:5,borderColor:"orange"}}>You are not assigned to any room.</h3>
+    ;
   }
 
  return (

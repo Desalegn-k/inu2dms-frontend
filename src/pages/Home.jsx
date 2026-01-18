@@ -187,11 +187,11 @@ export default function Home() {
 
               <div class="dean-detail1">
                 <div class="dean-image">
-                  {/* <img
+                  <img
                     src="../images/Belay-Zeleke-PhD.jp"
                     alt=" Student`s service dean."
                     class=""
-                  /> */}
+                  />
                 </div>
                 <div class="dean-detail">
                   <p>Belay Zeleke (PhD)</p>
